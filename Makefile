@@ -8,7 +8,7 @@ BINARIES = router_main
 all: $(BINARIES)
 
 # File(s) that needs to be compiled
-router_main: ./src/router_main.c libs/read_from_file.c libs/write_to_file.c libs/router_operation.c
+router_main: ./src/router_main.c ./libs/read_from_file.c ./libs/write_to_file.c ./libs/router_operation.c
 	$(CC) $(CLFAGS) $(INC) -o router_main ./src/router_main.c ./libs/read_from_file.c ./libs/write_to_file.c ./libs/router_operation.c
 
 # Run main file with 10 routers and 10 commands

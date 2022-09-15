@@ -3,4 +3,4 @@ project(routing_operation C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(routing_operation main.c)
+add_executable(routing_operation ./src/router_main.c)
