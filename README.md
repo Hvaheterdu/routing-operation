@@ -8,9 +8,9 @@ In the Makefile, there are a variety of calls that can be made to run two exampl
 
 First, run 
 
-´´´
+```
 $ make all
-´´´
+```
 
 This command will create the binary file needed to run the program.
 
