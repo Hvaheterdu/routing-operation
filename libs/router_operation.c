@@ -1,4 +1,4 @@
-#include "../include/header.h"
+#include "header.h"
 
 /**
  * @brief Prints out the information about the router
