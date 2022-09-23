@@ -22,7 +22,7 @@ struct router **read_from_file(char *filename)
     fread(&N, sizeof(int), 1, fptr);
 
     /**
-     * A doublepointer. This is a pointer that points at an array containing information
+     * A double pointer. This is a pointer that points at an array containing information
      * about were N router struct are stored in memory. The total use of each struct in
      * memory is 259 bytes. I am unsure if I should count the pointer to the connections
      * or not. If I add them, then we will have to add 10 * struct router.
