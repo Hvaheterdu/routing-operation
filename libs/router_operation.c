@@ -212,7 +212,7 @@ void delete_router(unsigned int router_ID)
 }
 
 /**
- * @brief Checking if there is a patch between two routers
+ * @brief Checking if there is a path between two routers
  * @param router_from: checking path from
  * @param router_to: checking path to
  * @return true if path exists, else false
