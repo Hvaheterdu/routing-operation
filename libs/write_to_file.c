@@ -15,7 +15,7 @@ void write_to_file(char *filename)
         exit(EXIT_FAILURE);
     }
 
-    /*
+    /**
      * Writing max routers to file from new_N
      * if router(s) have been deleted. If not
      * add same N as we read from file
