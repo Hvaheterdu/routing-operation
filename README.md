@@ -1,10 +1,10 @@
 # Router operations
 
-This repo is my solution to the mandatory assignment in the subject IN2140 - Introduction to operating systems and data communication at the University of Oslo. This mandatory assignment was related to making router operations more effective on campus. The program has been implemented in C.
+This repo is my solution to the mandatory assignment in the subject _IN2140 - Introduction to operating systems and data communication_ at the University of Oslo. This mandatory assignment was related to making router operations more effective. The program has been implemented in C.
 
 ## How to run
 
-In the Makefile, there are a variety of calls that can be made to run two example files.
+In the Makefile, there are a variety of calls that can be made to run the two example files.
 
 First, run 
 
