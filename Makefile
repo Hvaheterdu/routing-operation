@@ -1,7 +1,7 @@
 # Variable
 CC = gcc -g
 CFLAGS = -Wall -Wextra -Wpedantic
-INC = -I./includes/
+INC = -I ./includes/
 BINARIES = router_main
 
 # Compile all files
