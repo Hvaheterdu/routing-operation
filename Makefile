@@ -1,23 +1,23 @@
 # Variable
 CC = gcc -g
 CFLAGS = -Wall -Wextra -Wpedantic
-INC = -I ./includes/
+INC = -I includes/
 BINARIES = router_main
 
 # Compile all files
 all: $(BINARIES)
 
 # File(s) that needs to be compiled
-router_main: ./src/router_main.c ./libs/read_from_file.c ./libs/write_to_file.c ./libs/router_operation.c
-	$(CC) $(CLFAGS) $(INC) -o router_main ./src/router_main.c ./libs/read_from_file.c ./libs/write_to_file.c ./libs/router_operation.c
+router_main: src/router_main.c libs/read_from_file.c libs/write_to_file.c libs/router_operation.c
+	$(CC) $(CLFAGS) $(INC) -o router_main src/router_main.c libs/read_from_file.c libs/write_to_file.c libs/router_operation.c
 
 # Run main file with 10 routers and 10 commands
 run10: 
-	./router_main ./resources/10_routers_10_edges ./resources/commands_10_routers.txt
+	router_main resources/10_routers_10_edges resources/commands_10_routers.txt
 
 # Run main file with 50 routers and 150 edges
 run50: 
-	./router_main ./resources/50_routers_150_edges ./resources/commands_50_routers.txt
+	router_main resources/50_routers_150_edges resources/commands_50_routers.txt
 
 # Remove delivery folder
 remove:

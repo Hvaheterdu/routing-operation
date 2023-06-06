@@ -5,7 +5,7 @@
 #include <stdbool.h>
 
 // Global variable to hold max amount of routers in file
-unsigned int N ;
+unsigned int N;
 unsigned int new_N;
 
 // Global double pointer
