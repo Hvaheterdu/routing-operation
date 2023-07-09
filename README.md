@@ -22,4 +22,4 @@ _run50_ contains a binary file with fifty routers and one hundred and fifty edge
 
 ## Compatibility ##
 
-GCC version $\geq$ 10.0 made changes to how it compiles _tentative definitions_. Therefore, the _-fcommon_ flag has to be passed. If you are using a GCC version $\l$ 10.0, you can omit the _-fcommon_ flag
+GCC version $\geq$ 10.0 made changes to how it compiles _tentative definitions_. Therefore, the _-fcommon_ flag has to be passed. If you are using a GCC version $<$ 10.0, you can omit the _-fcommon_ flag
