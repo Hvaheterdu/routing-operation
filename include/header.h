@@ -1,17 +1,13 @@
-// Global include
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 
-// Global variable to hold max amount of routers in file
 unsigned int N;
 unsigned int new_N;
 
-// Global double pointer
 struct router **router_array;
 
-// Global struct
 struct router
 {
     unsigned int router_ID;
@@ -23,7 +19,6 @@ struct router
     bool visited;
 };
 
-// Global functions
 struct router **read_from_file(char *filename);
 
 struct router **get_commands(char *filename);
