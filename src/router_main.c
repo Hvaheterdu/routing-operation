@@ -7,7 +7,6 @@
  */
 struct router **get_commands(char *filename)
 {
-    // File management
     FILE *fptr;
     fptr = fopen(filename, "r");
     if (fptr == NULL)
@@ -16,18 +15,13 @@ struct router **get_commands(char *filename)
         exit(EXIT_FAILURE);
     }
 
-    // Line storing variable
-    char line[256];
-
     printf("\n--- COMMANDS FROM FILE ---\n");
 
-    // Reading until EOF
+    char line[256];
     while (fgets(line, sizeof(line), fptr) != NULL)
     {
-        // strtok splits a string up in tokens at a given char (in our case that is whitespace)
         char *command = strtok(line, " ");
 
-        // Reading what function to run and type converting to correct data type.
         if ((strcmp(command, "print") == 0))
         {
             char *temp = strtok(NULL, " ");
@@ -82,7 +76,6 @@ struct router **get_commands(char *filename)
             char *temp1 = strtok(NULL, " ");
             unsigned int router_to = (unsigned int)atoi(temp1);
 
-            // Mark all routers as unvisited before performing DFS on graph
             unvisited();
 
             printf("\n--- PATH SEARCH ---");
@@ -130,13 +123,11 @@ int main(int argc, char *argv[])
         write_to_file("written_50_routers");
     }
 
-    // Freeing every malloced router
     unsigned int i;
     for (i = 0; i < N; i++)
     {
         free(router_array[i]);
     }
-    // Freeing router array
     free(router_array);
 
     return 0;
