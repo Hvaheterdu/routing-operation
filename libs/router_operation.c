@@ -12,12 +12,10 @@ void print(unsigned int router_ID)
     printf("Router flag: %d\n", router_array[router_ID]->flag);
     printf("Router name length: %d\n", router_array[router_ID]->length);
 
-    // Adding nyllbyte at end of length
     router_array[router_ID]->name[router_array[router_ID]->length] = '\0';
     printf("Router name: %s\n", router_array[router_ID]->name);
     printf("Router %d connection(s): ", router_array[router_ID]->router_ID);
 
-    // Printing connections_to from given router
     unsigned int i;
     for (i = 0; i < router_array[router_ID]->counter; i++)
     {
@@ -117,14 +115,11 @@ void set_model(unsigned int router_ID, char new_name[253])
     printf("\n--- NAME CHANGE ---\n");
     printf("Original name: %s\n", router_array[router_ID]->name);
 
-    // Clearing the original name array
     memset(router_array[router_ID]->name, 0, router_array[router_ID]->length);
 
-    // Length of new name
     router_array[router_ID]->length = strlen(new_name);
     router_array[router_ID]->name[router_array[router_ID]->length] = '\0';
 
-    // Give new name
     unsigned int i;
     for (i = 0; i < router_array[router_ID]->length; i++)
     {
@@ -132,10 +127,6 @@ void set_model(unsigned int router_ID, char new_name[253])
     }
     printf("New name: %s", router_array[router_ID]->name);
 
-    /**
-     * Adding nullbyte after the name, so it is like the
-     * original file. Memset deleted nullbyte
-     */
     router_array[router_ID]->name[router_array[router_ID]->length] = 0x00;
 }
 
@@ -169,10 +160,8 @@ void delete_router(unsigned int router_ID)
 
     printf("Deleted router: %d\n", router_array[router_ID]->router_ID);
 
-    // Adding a new N to use when writing to file
     new_N = N;
 
-    // Deleting router connections
     unsigned int i, j, k;
     for (i = 0; i < N; i++)
     {
@@ -196,7 +185,6 @@ void delete_router(unsigned int router_ID)
         }
     }
 
-    // Delete and free router
     for (i = 0; i < N; i++)
     {
         if (router_array[i]->router_ID == router_ID)
