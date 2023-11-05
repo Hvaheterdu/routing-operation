@@ -1,9 +1,5 @@
 #include "header.h"
 
-/**
- * @brief Writing to file
- * @param filename: name of file
- */
 void write_to_file(char *filename)
 {
     FILE *fptr;
@@ -41,10 +37,6 @@ void write_to_file(char *filename)
     }
     printf("\nWriting...\n");
 
-    /**
-     * Looping through the connections for each router
-     * that is not deleted and writing them to file
-     */
     for (i = 0; i < N; i++)
     {
         if (router_array[i] != NULL)
