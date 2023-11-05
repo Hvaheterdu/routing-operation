@@ -1,9 +1,5 @@
 #include "header.h"
 
-/**
- * @brief Prints out the information about the router
- * @param router_ID: router ID
- */
 void print(unsigned int router_ID)
 {
     printf("\n--- ROUTER INFORMATION ---\n");
@@ -105,11 +101,6 @@ void set_flag(unsigned int router_ID, unsigned char bitpos, unsigned char value)
     }
 }
 
-/**
- * @brief Change router name
- * @param router_ID: router ID
- * @param new_name: new router name
- */
 void set_model(unsigned int router_ID, char new_name[253])
 {
     printf("\n--- NAME CHANGE ---\n");
@@ -130,11 +121,6 @@ void set_model(unsigned int router_ID, char new_name[253])
     router_array[router_ID]->name[router_array[router_ID]->length] = 0x00;
 }
 
-/**
- * @brief Add new connection between two routers
- * @param router_from: router connection from
- * @param router_to: router connection to
- */
 void add_connection(unsigned int router_from, unsigned int router_to)
 {
     if (router_array[router_from] || router_array[router_to] != NULL)
@@ -150,10 +136,6 @@ void add_connection(unsigned int router_from, unsigned int router_to)
     }
 }
 
-/**
- * @brief Delete a router and all connections
- * @param router_ID: ID of the router we are printing information about
- */
 void delete_router(unsigned int router_ID)
 {
     printf("\n--- DELETE ROUTER ---\n");
@@ -199,12 +181,6 @@ void delete_router(unsigned int router_ID)
     printf("\nWe have %d router(s) left\n", new_N);
 }
 
-/**
- * @brief Checking if there is a path between two routers
- * @param router_from: checking path from
- * @param router_to: checking path to
- * @return true if path exists, else false
- */
 bool router_existence(unsigned int router_start, unsigned int router_end)
 {
     bool existing = false;
@@ -236,9 +212,6 @@ bool router_existence(unsigned int router_start, unsigned int router_end)
     return existing;
 }
 
-/**
- * @brief Mark routers as not visited before DFS
- */
 void unvisited()
 {
     unsigned int i;
