@@ -99,9 +99,6 @@ struct router **get_commands(char *filename)
     return router_array;
 }
 
-/**
- * @brief Main function were the program runs from
- */
 int main(int argc, char *argv[])
 {
     if (argc < 3)
