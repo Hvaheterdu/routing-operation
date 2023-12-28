@@ -1,5 +1,5 @@
 # Variable
-CC = gcc -g -fcommon
+CC = gcc -g -fcommon -std=c2x
 CFLAGS = -Wall -Wextra -Wpedantic
 INC = -I includes/
 BINARIES = router_main
