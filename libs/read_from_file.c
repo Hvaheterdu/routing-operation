@@ -3,6 +3,7 @@
 struct router **read_from_file(char *filename)
 {
     N = 0;
+
     FILE *fptr;
     fptr = fopen(filename, "rb");
     if (fptr == NULL)
@@ -14,7 +15,6 @@ struct router **read_from_file(char *filename)
     fread(&N, sizeof(int), 1, fptr);
 
     struct router **router_array = (struct router **)malloc(N * sizeof(struct router *));
-
     if (router_array == 0)
     {
         printf("Malloc failed\n");
@@ -70,8 +70,9 @@ struct router **read_from_file(char *filename)
         router_array[temp_from]->counter++;
         printf("Connection from %d to %d\n", router_array[temp_from]->router_ID, router_array[temp_to]->router_ID);
     }
-    
+
     fclose(fptr);
+
     printf("\n--- READING FROM BINARY FILE COMPLETED ---\n");
 
     return router_array;
