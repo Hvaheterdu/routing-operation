@@ -9,6 +9,7 @@ void print(unsigned int router_ID)
     printf("Router name length: %d\n", router_array[router_ID]->length);
 
     router_array[router_ID]->name[router_array[router_ID]->length] = '\0';
+
     printf("Router name: %s\n", router_array[router_ID]->name);
     printf("Router %d connection(s): ", router_array[router_ID]->router_ID);
 
@@ -172,9 +173,7 @@ void delete_router(unsigned int router_ID)
         if (router_array[i]->router_ID == router_ID)
         {
             free(router_array[i]);
-
             router_array[i] = NULL;
-
             new_N--;
         }
     }
