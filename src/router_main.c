@@ -108,9 +108,7 @@ int main(int argc, char *argv[])
     }
 
     router_array = read_from_file(argv[1]);
-
     router_array = get_commands(argv[2]);
-
     if (strcmp(argv[1], "resources/10_routers_10_edges") == 0)
     {
         write_to_file("written_10_routers");
