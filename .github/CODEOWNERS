@@ -1,0 +1,16 @@
+# Order is important; the last matching pattern takes the most precedence.
+
+# Global owner
+* @Hvaheterdu
+
+# Owner for includes directory
+includes/ @Hvaheterdu
+
+# Owner for libs directory
+libs/ @Hvaheterdu
+
+# Owner for resources directory
+resources/ @Hvaheterdu
+
+# Owner for src directory
+src/ @Hvaheterdu
